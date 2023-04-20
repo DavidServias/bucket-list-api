@@ -18,6 +18,15 @@ console.log(process.env); // remove this after you've confirmed it working
 
 console.log("db uri test:" + process.env.REACT_APP_DB_URI);
 
+// connect to Mongoose db
+//This line was added in response to the following error message:
+// DeprecationWarning: Mongoose: the `strictQuery` option will be switched back to 
+//`false` by default in Mongoose 7. 
+//Use `mongoose.set('strictQuery', false);` if you 
+// want to prepare for this change. 
+//Or use `mongoose.set('strictQuery', true);` 
+//to suppress this warning.
+mongoose.set("strictQuery", false);
 // connect to db
 connect(process.env.REACT_APP_DB_URI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(function(result) {
