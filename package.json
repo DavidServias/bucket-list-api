@@ -10,7 +10,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node index.js"
+    "build": "node index.js",
+    "start": "node index.js"
   },
   "author": "David Servias",
   "license": "ISC",

@@ -4,6 +4,7 @@ import express from 'express';
 import cors from 'cors';
 const app = express();
 const PORT = 8080;
+const HOST = "0.0.0.0";
 import userRoutes from './routes/userRoutes.js';
 import bucketListRoutes from './routes/bucketlist_routes.js';
 import loginRoutes from './routes/login_routes.js';
@@ -36,7 +37,7 @@ connect(process.env.REACT_APP_DB_URI, {useNewUrlParser: true, useUnifiedTopology
 
 // Apply CORS policy
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: process.env.ORIGIN
 }));
 
 
