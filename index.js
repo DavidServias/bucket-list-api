@@ -3,7 +3,7 @@ const { connect } = mongoose;
 import express from 'express';
 import cors from 'cors';
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const HOST = "0.0.0.0";
 import userRoutes from './routes/userRoutes.js';
 import bucketListRoutes from './routes/bucketlist_routes.js';
