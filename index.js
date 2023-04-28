@@ -36,10 +36,12 @@ connect(process.env.REACT_APP_DB_URI, {useNewUrlParser: true, useUnifiedTopology
     .catch((err) => console.log(err));
 
 // Apply CORS policy
-app.use(cors({
-    //origin: process.env.ORIGIN
-    origin: "https://bucketlist-omft.onrender.com/"
-}));
+app.use(cors(
+//     {
+//     //origin: process.env.ORIGIN
+//     origin: "https://bucketlist-omft.onrender.com/"
+// }
+));
 
 
 // Assign the PORT to our app
