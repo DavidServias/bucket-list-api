@@ -38,7 +38,7 @@ connect(process.env.REACT_APP_DB_URI, {useNewUrlParser: true, useUnifiedTopology
 // Apply CORS policy
 app.use(cors(
     {
-    origin: "https://bucketlist-omft.onrender.com/",
+    origin: "https://bucketlist-app.vercel.app",
     origin: "http://localhost:3000"
 }
 ));
