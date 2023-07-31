@@ -58,11 +58,16 @@ const updateItemStatus = async (req, res) => {
         let user = await User.findOne({"user_identifier": userIdentifier});
         let item = user.bucket_list.id(itemId);
         item.completed = req.body['completed'];
-        user.save(function (err) {
-            if (err) return handleError(err)
-            console.log('Success!');
-          });
+        // user.save(function (err) {
+        //     if (err) return handleError(err)
+        //     console.log('Success!');
+        //     });
+
+        // handleError = (err) => {
+        //     console.log(err);
+        // };
         
+        user.save();
         res.send(user);
           
     }
