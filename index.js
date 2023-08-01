@@ -36,10 +36,11 @@ connect(process.env.REACT_APP_DB_URI, {useNewUrlParser: true, useUnifiedTopology
     .catch((err) => console.log(err));
 
 // Apply CORS policy
+
 app.use(cors(
     {
-    origin: "https://bucketlist-app.vercel.app",
-   // origin: "http://localhost:3000"
+    origin: ["https://bucketlist-app.vercel.app",
+        "http://localhost:3000"]
 }
 ));
 
